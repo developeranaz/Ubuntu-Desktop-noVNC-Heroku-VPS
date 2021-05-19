@@ -14,7 +14,7 @@ RUN apt-get autoclean
 RUN apt-get autoremove
 
 COPY novnc.zip /novnc.zip
-#COPY supervisor.conf /system/supervisor.conf
+COPY supervisor.conf /system/supervisor.conf
 COPY . /system
 RUN unzip /novnc.zip
 RUN cp -r /novnc/ /usr/share/
