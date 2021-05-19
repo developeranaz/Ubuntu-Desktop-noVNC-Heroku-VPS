@@ -17,7 +17,7 @@ COPY novnc.zip /novnc.zip
 #COPY supervisor.conf /system/supervisor.conf
 COPY . /system
 RUN unzip /novnc.zip
-RUN cp -r /novnc/ /usr/share/
+RUN cp -r /novnc/ /usr/share/novnc
 RUN mv /usr/share/novnc/vnc.html /usr/share/novnc/index.html
 RUN chmod +x /system/conf.d/websockify.sh
 RUN chmod +x /system/supervisor.sh
