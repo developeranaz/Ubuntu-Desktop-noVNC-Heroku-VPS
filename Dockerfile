@@ -1,14 +1,33 @@
 FROM ubuntu:20.10
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    dbus-x11 nano sudo bash net-tools \
-    novnc x11vnc xvfb \
-    zip unzip supervisor curl git wget ssh terminator \
-    xfce4 \
-    gnome-shell ubuntu-gnome-desktop gnome-session gdm3 tasksel \
-    gnome-session gdm3 tasksel \
-    falkon 
+RUN apt-get update && \
+    apt install dbus-x11 
+    apt install sudo 
+    apt install bash 
+    apt install net-tools \
+    apt install novnc 
+    apt install x11vnc 
+    apt install xvfb \
+    apt install supervisor 
+    apt install xfce4 \
+    apt install gnome-shell 
+    apt install ubuntu-gnome-desktop
+    apt install gnome-session 
+    apt install gdm3 
+    apt install tasksel \
+    apt install gnome-session 
+    apt install gdm3 
+    apt install tasksel \
+    apt install ssh 
+    apt install terminator \
+    apt install git 
+    apt install nano
+    apt install curl
+    apt install wget 
+    apt install zip 
+    apt install unzip 
+    apt install falkon 
 
 RUN apt-get autoclean
 RUN apt-get autoremove
