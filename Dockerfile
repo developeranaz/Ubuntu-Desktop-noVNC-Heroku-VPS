@@ -16,7 +16,7 @@ RUN apt-get autoremove
 COPY novnc.zip /novnc.zip
 #COPY supervisor.conf /system/supervisor.conf
 COPY . /system
-RUN unzip /novnc.zip -d /usr/share
+RUN unzip -o /novnc.zip -d /usr/share
 #RUN cp -r /novnc/ /usr/share/novnc
 #RUN mv /usr/share/novnc/vnc.html /usr/share/novnc/index.html
 RUN chmod +x /system/conf.d/websockify.sh
