@@ -13,14 +13,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN apt-get autoclean
 RUN apt-get autoremove
 
-COPY nov.zip /nov.zip
+COPY novnc.zip /novnc.zip
 
 COPY . /system
-RUN unzip /nov.zip
+RUN unzip /novnc.zip
 RUN cp -r /novnc/ /usr/share/
-RUN mv /usr/share/novnc/vnc_lite.html /usr/share/novnc/ignO.1
 RUN mv /usr/share/novnc/vnc.html /usr/share/novnc/index.html
 RUN chmod +x /system/conf.d/websockify.sh
-RUN chmod +x /system/run.sh
+RUN chmod +x /system/supervisor.sh
 
-CMD ["/system/run.sh"]
+CMD ["/system/supervisor.sh"]
