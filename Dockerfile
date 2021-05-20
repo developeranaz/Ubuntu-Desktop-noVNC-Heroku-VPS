@@ -15,9 +15,6 @@ RUN apt-get update && \
     apt install ubuntu-gnome-desktop -y  && \
     apt install gnome-session -y  && \ 
     apt install gdm3 -y  && \ 
-    apt install tasksel \
-    apt install gnome-session -y  && \ 
-    apt install gdm3 -y  && \ 
     apt install tasksel -y  && \
     apt install ssh  -y  && \
     apt install terminator -y  && \
