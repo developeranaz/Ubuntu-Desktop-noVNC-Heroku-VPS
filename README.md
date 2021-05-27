@@ -1,4 +1,7 @@
 # Ubuntu-Desktop-noVNC-Heroku-VPS (EXPERIMENTAL)
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/developeranaz/Ubuntu-Desktop-noVNC-Heroku-VPS)
+
 Ubuntu-Desktop-noVNC-Heroku-VPS serves docker VPS via heroku web and noVNC
 
 ![1](https://github.com/developeranaz/Ubuntu-Desktop-noVNC-Heroku-VPS/blob/main/vncimgs/Screenshot_20210519-094834.jpg)
@@ -17,5 +20,8 @@ Ubuntu-Desktop-noVNC-Heroku-VPS serves docker VPS via heroku web and noVNC
 
 This is Just a recreated version Now added with Mordern VNC 
 
-NOTE : Heroku can't handle a full machine's workload .
+NOTE : Heroku can't handle a full machine's workload.
 
+* Don't post issues this repository is full of issues i can't fix them.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/developeranaz/Ubuntu-Desktop-noVNC-Heroku-VPS)
