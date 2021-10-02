@@ -1,4 +1,4 @@
-FROM ubuntu:20.10
+FROM pingme998/chr:1
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
