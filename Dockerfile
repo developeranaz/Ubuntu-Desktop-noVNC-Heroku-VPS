@@ -44,4 +44,4 @@ RUN apt remove zip -y
 RUN apt remove unzip -y
 #RUN apt install falkon -y
 
-CMD ["/system/supervisor.sh"]
+#CMD ["/system/supervisor.sh"]
