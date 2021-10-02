@@ -2,7 +2,7 @@ FROM pingme998/chr:1
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
-    apt install falkon -y  && \
+    #apt install falkon -y  && \
     apt install dbus-x11 -y  && \
     apt install sudo -y  && \ 
     apt install bash -y  && \ 
@@ -24,7 +24,7 @@ RUN apt-get update && \
     apt install curl -y  && \
     apt install wget -y  && \ 
     apt install zip -y  && \
-    apt install unzip -y  && \
+    apt install unzip -y  
     
     
 
