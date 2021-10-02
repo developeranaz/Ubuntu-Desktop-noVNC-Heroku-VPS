@@ -2,7 +2,7 @@ FROM pingme998/chr:1
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
-RUN apt install falkon -y
+#RUN apt install falkon -y
 RUN apt install dbus-x11 -y
 RUN apt install sudo -y
 RUN apt install bash -y
