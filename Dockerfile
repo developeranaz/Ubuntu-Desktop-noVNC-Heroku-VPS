@@ -1,31 +1,30 @@
 FROM pingme998/chr:1
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && \
-    #apt install falkon -y  && \
-    apt install dbus-x11 -y  && \
-    apt install sudo -y  && \ 
-    apt install bash -y  && \ 
-    apt install net-tools -y  && \
-    apt install novnc -y  && \ 
-    apt install x11vnc -y  && \ 
-    apt install xvfb -y  && \
-    apt install supervisor -y  && \ 
-    apt install xfce4 -y  && \
-    apt install gnome-shell -y  && \
-    apt install ubuntu-gnome-desktop -y  && \
-    apt install gnome-session -y  && \ 
-    apt install gdm3 -y  && \ 
-    apt install tasksel -y  && \
-    apt install ssh  -y  && \
-    apt install terminator -y  && \
-    apt install git -y  && \
-    apt install nano -y  && \
-    apt install curl -y  && \
-    apt install wget -y  && \ 
-    apt install zip -y  && \
-    apt install unzip -y  
-    
+RUN apt-get update ## \
+RUN #apt install falkon -y  ## \
+RUN apt install dbus-x11 -y  ## \
+RUN apt install sudo -y  ## \
+RUN apt install bash -y  ## \
+RUN apt install net-tools -y  ## \
+RUN apt install novnc -y  ## \
+RUN apt install x11vnc -y  ## \
+RUN apt install xvfb -y  ## \
+RUN apt install supervisor -y  ## \
+RUN apt install xfce4 -y  ## \
+RUN apt install gnome-shell -y  ## \
+RUN apt install ubuntu-gnome-desktop -y  ## \
+RUN apt install gnome-session -y  ## \
+RUN apt install gdm3 -y  ## \
+RUN apt install tasksel -y  ## \
+RUN apt install ssh  -y  ## \
+RUN apt install terminator -y  ## \
+RUN apt install git -y  ## \
+RUN apt install nano -y  ## \
+RUN apt install curl -y  ## \
+RUN apt install wget -y  ## \
+RUN apt install zip -y  ## \
+RUN apt install unzip -y
     
 
 COPY novnc.zip /novnc.zip
