@@ -24,9 +24,8 @@ RUN apt-get update && \
     apt install wget -y  && \ 
     apt install zip -y  && \
     apt install unzip -y  && \
-    apt install falkon -y  && \
-    apt-get autoclean -y  && \
-    apt-get autoremove
+    apt install falkon -y  
+    
 
 COPY novnc.zip /novnc.zip
 COPY . /system
