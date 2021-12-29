@@ -1,4 +1,10 @@
-FROM ubuntu:20.10
+FROM ubuntu:latest
+RUN apt update
+RUN apt install apt-transport-https curl -y
+RUN curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+RUN echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|tee /etc/apt/sources.list.d/brave-browser-release.list
+RUN apt update 
+RUN apt install brave-browser -y
 ENV DEBIAN_FRONTEND=noninteractive
 ENV VNC_PASS="developeranaz" \
     VNC_TITLE="classzero" \
@@ -10,7 +16,6 @@ ENV VNC_PASS="developeranaz" \
     LANGUAGE=en_US.UTF-8 \
     LC_ALL=C.UTF-8 \
     TZ="Asia/Kolkata"
-
 RUN apt-get update && \
     apt install dbus-x11 -y  && \
     apt install sudo -y  && \ 
@@ -36,7 +41,6 @@ RUN apt-get update && \
     apt install unzip -y  && \
     apt-get autoclean -y  && \
     apt-get autoremove
-RUN 
 
 COPY novnc.zip /novnc.zip
 COPY . /system
