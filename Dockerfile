@@ -1,5 +1,15 @@
 FROM ubuntu:20.10
 ENV DEBIAN_FRONTEND=noninteractive
+ENV VNC_PASS="developeranaz" \
+    VNC_TITLE="classzero" \
+    VNC_RESOLUTION="1280x720" \
+    VNC_SHARED=0 \
+    DISPLAY=:0 \
+    BRAVE_USE_SHM=1 \
+    LANG=en_US.UTF-8 \
+    LANGUAGE=en_US.UTF-8 \
+    LC_ALL=C.UTF-8 \
+    TZ="Asia/Kolkata"
 
 RUN apt-get update && \
     apt install dbus-x11 -y  && \
@@ -24,9 +34,9 @@ RUN apt-get update && \
     apt install wget -y  && \ 
     apt install zip -y  && \
     apt install unzip -y  && \
-    apt install falkon -y  && \
     apt-get autoclean -y  && \
     apt-get autoremove
+RUN 
 
 COPY novnc.zip /novnc.zip
 COPY . /system
